@@ -21,36 +21,45 @@ class Confirm extends Component {
     return (
       <MuiThemeProvider>
         <>
-          <AppBar title="Confirm User Data"></AppBar>
+          <AppBar 
+            title="Confirm User Data"
+            style={styles.center}
+          ></AppBar>
           <List>
             <ListItem 
               primaryText="First name"
               secondaryText={firstName}
+              style={styles.center}
             />
             <ListItem 
               primaryText="Last name"
               secondaryText={lastName}
+              style={styles.center}
             />
             <ListItem 
               primaryText="Email"
               secondaryText={email}
+              style={styles.center}
             />
             <ListItem 
               primaryText="Occupation"
               secondaryText={occupation}
+              style={styles.center}
             />
             <ListItem 
               primaryText="City"
               secondaryText={city}
+              style={styles.center}
             />
             <ListItem 
               primaryText="Bio"
               secondaryText={bio}
+              style={styles.center}
             />
           </List>
           <br/>
           <RaisedButton 
-            label="Confirm and Continue"
+            label="Confirm"
             primary={true}
             style={styles.button}
             onClick={this.continue}
@@ -69,7 +78,16 @@ class Confirm extends Component {
 
 const styles = {
   button: {
-    margin: 15
+    margin: '0 auto',
+    display: 'block',
+    width: 125
+  },
+  center: {
+    textAlign: 'center'
+  },
+  textfield: {
+    margin: '0 auto',
+    display: 'block'
   }
 }
 

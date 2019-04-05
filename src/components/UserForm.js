@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
@@ -38,6 +37,7 @@ class UserForm extends Component {
     const { firstName, lastName, email, occupation, city, bio } = this.state;
     const values = { firstName, lastName, email, occupation, city, bio };
     
+    // eslint-disable-next-line default-case
     switch (step) {
       case 1: 
         return (

@@ -15,24 +15,31 @@ class FormUserDetails extends Component {
     return (
       <MuiThemeProvider>
         <>
-          <AppBar title="Enter User Details"></AppBar>
+          <AppBar 
+            title="Enter User Details"
+            style={styles.appbar}
+          >
+          </AppBar>
           <TextField 
             hintText="Enter first name"
             floatingLabelText="First Name"
             onChange={handleChange('firstName')}
             defaultValue={values.firstName}
+            style={styles.textfield}
           />
           <TextField 
             hintText="Enter last name"
             floatingLabelText="Last Name"
             onChange={handleChange('lastName')}
             defaultValue={values.lastName}
+            style={styles.textfield}
           />
           <TextField 
             hintText="Enter your email"
             floatingLabelText="Email"
             onChange={handleChange('email')}
             defaultValue={values.email}
+            style={styles.textfield}
           />
           <br/>
           <RaisedButton 
@@ -49,7 +56,16 @@ class FormUserDetails extends Component {
 
 const styles = {
   button: {
-    margin: 15
+    margin: '0 auto',
+    display: 'block',
+    width: 125
+  },
+  appbar: {
+    textAlign: 'center'
+  },
+  textfield: {
+    margin: '0 auto',
+    display: 'block'
   }
 }
 
